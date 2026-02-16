@@ -1,0 +1,79 @@
+---
+---
+
+<header class="header">
+  <nav class="nav container" aria-label="Hoofdnavigatie">
+    <span class="nav-logo">Turnen Hengelo</span>
+    <ul class="nav-menu">
+      <li><a href="#over">Over</a></li>
+      <li><a href="#varianten">Varianten</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(23, 184, 230, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem var(--spacing-sm);
+  }
+
+  @media (min-width: 768px) {
+    .nav {
+      padding: 1rem var(--spacing-md);
+    }
+  }
+
+  .nav-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .nav-logo:hover {
+    text-decoration: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: var(--spacing-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu li {
+    padding: 0;
+  }
+
+  .nav-menu li::before {
+    display: none;
+  }
+
+  .nav-menu a {
+    font-weight: 500;
+    color: var(--color-text);
+    padding: 0.5rem 0;
+    transition: color var(--transition-base);
+  }
+
+  .nav-menu a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+</style>
+

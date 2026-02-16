@@ -1,0 +1,569 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Turnen in Hengelo | Sportvereniging H.G.V.';
+const description = 'Van voorbereidend turnen (4+) tot jeugd en volwassenen. Ontdek wat er in Hengelo allemaal mogelijk is en welke sporten bij jou passen.';
+const heroImage = '/images/hero.avif';
+---
+
+<BaseLayout title={title} description={description} heroImage={heroImage}>
+  <!-- Hero Section -->
+  <section id="hero" class="hero" aria-label="Hoofdsectie">
+    <picture class="hero-background" aria-hidden="true">
+      <source type="image/avif" srcset="/images/hero.avif" />
+      <source type="image/webp" srcset="/images/hero.webp" />
+      <img 
+        src="/images/hero.webp" 
+        alt="" 
+        loading="eager" 
+        fetchpriority="high"
+        width="2002"
+        height="3648"
+        decoding="async"
+        sizes="100vw"
+        onload="this.classList.add('loaded'); this.closest('.hero')?.classList.add('image-loaded')"
+      />
+    </picture>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title fade-in">Turnen in Hengelo</h1>
+      <p class="hero-subtitle fade-in">Van voorbereidend turnen (4+) tot jeugd en volwassenen<br />met aandacht voor plezier, veiligheid en groei.</p>
+      <p class="hero-intro fade-in">Turnen is voor iedereen. Ontdek wat er in Hengelo allemaal mogelijk is en welke sporten bij jou passen.</p>
+      <nav class="hero-cta fade-in" aria-label="Call-to-action navigatie">
+        <a href="#over" class="btn">Meer over turnen</a>
+        <a href="#varianten" class="btn btn-secondary">Andere sporten</a>
+        <a href="#contact" class="btn btn-secondary">Contact</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Introductie -->
+  <section id="over" class="section">
+    <div class="container">
+      <h2>Hengelo turnt</h2>
+      <p>Welkom bij Turnen Hengelo! Op deze pagina lees je alles over turnlessen en -activiteiten binnen onze vereniging. We leggen uit wat turnen inhoudt, welke varianten er zijn, en hoe jij kunt beginnen — op jouw eigen niveau.</p>
+    </div>
+  </section>
+
+  <!-- Over turnen -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Wat houdt turnen in?</h2>
+      <div class="content-with-image">
+        <div class="content-text">
+          <p>Turnen is méér dan trucjes uitvoeren. Je werkt aan techniek, lenigheid, kracht, balans, coördinatie en zelfvertrouwen. Onze trainingen zijn opgebouwd met aandacht voor veiligheid, ontwikkeling en plezier. Elke sporter traint op zijn of haar eigen niveau, binnen kleine groepen en onder begeleiding van gediplomeerde trainers.</p>
+        </div>
+        <div class="content-image">
+          <picture>
+            <source type="image/avif" srcset="/images/Turnen1.avif" />
+            <source type="image/webp" srcset="/images/Turnen1.webp" />
+            <img 
+              src="/images/Turnen1.webp" 
+              alt="Turnen in actie" 
+              loading="lazy" 
+              width="800"
+              height="600"
+              decoding="async"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voor wie is turnen? -->
+  <section class="section">
+    <div class="container">
+      <h2>Voor wie is turnen?</h2>
+      
+      <div class="content-grid">
+        <div class="content-item">
+          <h3>Turnen voor iedereen</h3>
+          <p>Turnen is geschikt voor alle leeftijden. Ook als je slechts één keer per week wilt trainen, kun je volledig meedoen binnen je eigen niveau.</p>
+        </div>
+        
+        <div class="content-item">
+          <h3>Jongens en meisjes samen</h3>
+          <p>In de lessen trainen jongens en meisjes samen. Hoewel wedstrijden verschillen, zijn de meeste bewegingen gelijk. Samen trainen werkt motiverend en helpt bij het leren van nieuwe elementen.</p>
+        </div>
+        
+        <div class="content-item">
+          <h3>Verschillende leeftijdsgroepen</h3>
+          <p>Van jonge beginners tot ervaren sporters: iedereen leert in zijn eigen tempo. Het niveauverschil binnen groepen zorgt juist voor een fijne dynamiek. Voor de jongste sporters is er voorbereidend turnen (4+), voor de oudere sporters zijn er speciale lessen en extra uitdagingen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lesopbouw -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Hoe ziet een turnles eruit?</h2>
+      <p>Onze turnlessen duren doorgaans langer dan een standaard gymles, zodat er ruimte is voor:</p>
+      <ul>
+        <li>een goede warming-up</li>
+        <li>techniektraining</li>
+        <li>leren van elementen zoals steunen, rollen, springen en balanceren</li>
+        <li>persoonlijke begeleiding</li>
+        <li>uitdaging op ieders niveau</li>
+      </ul>
+      <p class="mt-md">Naast de reguliere lessen zijn er extra disciplines en sporten waarin je je verder kunt ontwikkelen.</p>
+    </div>
+  </section>
+
+  <!-- Andere sporten & varianten -->
+  <section id="varianten" class="section">
+    <div class="container">
+      <h2>Turnen is zoveel meer</h2>
+      <p class="mb-lg">Binnen Turnen Hengelo kun je verschillende disciplines ontdekken die aansluiten bij jouw interesses.</p>
+      
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-image">
+            <picture>
+              <source type="image/avif" srcset="/images/sports/rhonradturnen.avif" />
+              <source type="image/webp" srcset="/images/sports/rhonradturnen.webp" />
+              <img 
+                src="/images/sports/rhonradturnen.webp" 
+                alt="Rhönradturnen" 
+                loading="lazy" 
+                width="500"
+                height="500"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <h3>Rhönradturnen</h3>
+          <p>Turnen in een groot rad waarin je rollen, spiralen en sprongen leert uitvoeren. Een spectaculaire en unieke sport.</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-image">
+            <picture>
+              <source type="image/avif" srcset="/images/sports/groepsspringen.avif" />
+              <source type="image/webp" srcset="/images/sports/groepsspringen.webp" />
+              <img 
+                src="/images/sports/groepsspringen.webp" 
+                alt="Groepsspringen" 
+                loading="lazy" 
+                width="500"
+                height="500"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <h3>Groepsspringen</h3>
+          <p>Samen springen op vloer, mat en minitrampolines. Een dynamische teamsport met veel energie en samenwerking.</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-image">
+            <picture>
+              <source type="image/avif" srcset="/images/sports/trampolinespringen.avif" />
+              <source type="image/webp" srcset="/images/sports/trampolinespringen.webp" />
+              <img 
+                src="/images/sports/trampolinespringen.webp" 
+                alt="Trampolinespringen" 
+                loading="lazy" 
+                width="500"
+                height="500"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <h3>Trampolinespringen</h3>
+          <p>Grote trampoline, series sprongen en creatieve bewegingen. Ideaal voor sporters die houden van ritme, balans en uitdaging.</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-image">
+            <picture>
+              <source type="image/avif" srcset="/images/sports/airtrackspringen.avif" />
+              <source type="image/webp" srcset="/images/sports/airtrackspringen.webp" />
+              <img 
+                src="/images/sports/airtrackspringen.webp" 
+                alt="Airtrackspringen" 
+                loading="lazy" 
+                width="500"
+                height="500"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <h3>Airtrackspringen</h3>
+          <p>Turnen op een lange, met lucht gevulde baan die hogere en mooiere sprongen mogelijk maakt.</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-image">
+            <picture>
+              <source type="image/avif" srcset="/images/sports/Klimdoekturnen.avif" />
+              <source type="image/webp" srcset="/images/sports/Klimdoekturnen.webp" />
+              <img 
+                src="/images/sports/Klimdoekturnen.webp" 
+                alt="Klimdoekturnen (Aerial silks)" 
+                loading="lazy" 
+                width="500"
+                height="500"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <h3>Klimdoekturnen (Aerial silks)</h3>
+          <p>Acrobatics in lange, hangende doeken. Je leert houdingen, duikels en gecontroleerde bewegingen.</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-image">
+            <picture>
+              <source type="image/avif" srcset="/images/sports/acrogym.avif" />
+              <source type="image/webp" srcset="/images/sports/acrogym.webp" />
+              <img 
+                src="/images/sports/acrogym.webp" 
+                alt="Acrogym" 
+                loading="lazy" 
+                width="500"
+                height="500"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <h3>Acrogym</h3>
+          <p>Samenwerken in duo's of trio's met balanselementen, tilfiguren en choreografie.</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-image card-image-zoom">
+            <picture>
+              <source type="image/avif" srcset="/images/sports/freerunning.avif" />
+              <source type="image/webp" srcset="/images/sports/freerunning.webp" />
+              <img 
+                src="/images/sports/freerunning.webp" 
+                alt="Free-running" 
+                loading="lazy" 
+                width="500"
+                height="500"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <h3>Free-running</h3>
+          <p>De kunst om obstakels zo vloeiend en gecontroleerd mogelijk te nemen. Focus op flow, techniek en creativiteit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kleding & veiligheid -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Kleding & veiligheid</h2>
+      <ul>
+        <li>Strakke sportkleding zonder koorden of losse onderdelen</li>
+        <li>Vaak op blote voeten of turnslofjes; bij trampoline sokken met grip</li>
+        <li>Haar vast, geen sieraden</li>
+        <li>Veiligheid en goede begeleiding staan altijd voorop</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Heb je vragen, wil je een keer meedoen of wil je meer weten over een van de sporten? Neem gerust contact op.</p>
+      
+      <div class="contact-info mt-md">
+        <p>
+          <strong>Bel / WhatsApp:</strong> 
+          <a href="tel:+31643118346" aria-label="Bel of WhatsApp 06-43118346">06-43118346</a>
+        </p>
+        <p>
+          <strong>E-mail:</strong> 
+          <a href="mailto:secretariaat@hgvhengelo.nl" aria-label="E-mail naar secretariaat">secretariaat@hgvhengelo.nl</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Donkere achtergrond die minder opvalt - matcht beter met afbeelding */
+    background: #1a1a1a;
+    color: var(--color-white);
+    text-align: center;
+    padding: var(--spacing-2xl) 0;
+    overflow: hidden;
+    transition: background-color 0.2s ease;
+  }
+
+  /* Verberg achtergrond zodra afbeelding geladen is */
+  .hero.image-loaded {
+    background: transparent;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    image-rendering: high-quality;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform;
+    aspect-ratio: 2002 / 3648;
+  }
+
+  /* Markeer afbeelding als geladen voor CSS selectors */
+  .hero-background img.loaded {
+    /* Afbeelding is geladen */
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-white);
+  }
+
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 3.5rem;
+    }
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-white);
+    opacity: 0.95;
+  }
+
+  @media (min-width: 768px) {
+    .hero-subtitle {
+      font-size: 1.5rem;
+    }
+  }
+
+  .hero-intro {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-white);
+    opacity: 0.9;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+  }
+
+  @media (min-width: 640px) {
+    .hero-cta {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  .hero-cta .btn {
+    min-width: 180px;
+  }
+
+  .hero-cta .btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .hero-cta .btn-secondary:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border-color: var(--color-white);
+  }
+
+  /* Content Grid */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  @media (min-width: 768px) {
+    .content-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .content-item h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  /* Content with Image */
+  .content-with-image {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+  }
+
+  @media (min-width: 768px) {
+    .content-with-image {
+      flex-direction: row;
+      align-items: center;
+      gap: var(--spacing-lg);
+    }
+  }
+
+  .content-text {
+    flex: 1;
+  }
+
+  .content-image {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .content-image {
+      max-width: 50%;
+    }
+  }
+
+  .content-image picture,
+  .content-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    display: block;
+    aspect-ratio: 800 / 600;
+    object-fit: cover;
+  }
+
+  /* Contact Info */
+  .contact-info {
+    background: var(--color-bg-light);
+    padding: var(--spacing-md);
+    border-radius: 0.5rem;
+    max-width: 600px;
+  }
+
+  .contact-info p {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .contact-info a {
+    font-weight: 500;
+  }
+
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+
+  /* Fade-in delays - disabled for users who prefer reduced motion */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in:nth-child(1) {
+      animation-delay: 0.1s;
+      opacity: 0;
+    }
+
+    .fade-in:nth-child(2) {
+      animation-delay: 0.2s;
+      opacity: 0;
+    }
+
+    .fade-in:nth-child(3) {
+      animation-delay: 0.3s;
+      opacity: 0;
+    }
+
+    .fade-in:nth-child(4) {
+      animation-delay: 0.4s;
+      opacity: 0;
+    }
+  }
+
+  /* Card Images */
+  .card-image {
+    width: calc(100% + var(--spacing-md) * 2);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 0.75rem 0.75rem 0 0;
+    margin: calc(var(--spacing-md) * -1) calc(var(--spacing-md) * -1) var(--spacing-md);
+    background-color: var(--color-bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-image picture,
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .card-image img {
+    object-fit: contain;
+    transition: transform var(--transition-base);
+    aspect-ratio: 1 / 1;
+  }
+
+  .card-image-zoom img {
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .card:hover .card-image img {
+    transform: scale(1.05);
+  }
+</style>
+
