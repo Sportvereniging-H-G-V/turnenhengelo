@@ -1,6 +1,9 @@
 name: Cursor AI Code Review
 
 on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
   pull_request_target:
     branches: [main]
     types: [opened, synchronize, reopened, ready_for_review]
@@ -14,7 +17,10 @@ jobs:
   review:
     name: AI Code Review
     runs-on: ubuntu-latest
-    if: github.event.pull_request.draft == false
+    if: >-
+      github.event.pull_request.draft == false &&
+      ((github.event_name == 'pull_request' && github.actor != 'dependabot[bot]') ||
+       (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]'))
 
     steps:
       - name: Checkout code
