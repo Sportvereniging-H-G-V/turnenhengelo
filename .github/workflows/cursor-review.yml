@@ -4,9 +4,6 @@ on:
   pull_request:
     branches: [main]
     types: [opened, synchronize, reopened, ready_for_review]
-  pull_request_target:
-    branches: [main]
-    types: [opened, synchronize, reopened, ready_for_review]
 
 permissions:
   pull-requests: write
@@ -19,19 +16,20 @@ jobs:
     runs-on: ubuntu-latest
     if: >-
       github.event.pull_request.draft == false &&
-      ((github.event_name == 'pull_request' && github.actor != 'dependabot[bot]') ||
-       (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]'))
+      github.actor != 'dependabot[bot]'
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Install Cursor CLI
         run: |
-          curl https://cursor.com/install -fsS | bash
+          curl -fsSL https://cursor.com/install -o /tmp/install-cursor.sh
+          # Verify the script is well-formed before executing (basic sanity check)
+          bash -n /tmp/install-cursor.sh
+          bash /tmp/install-cursor.sh
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
       - name: Configure git identity

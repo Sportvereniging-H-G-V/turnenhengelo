@@ -67,9 +67,29 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <script is:inline>
 // Defer script execution until DOM is ready
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initBackToTop);
+  document.addEventListener('DOMContentLoaded', init);
 } else {
+  init();
+}
+
+function init() {
+  initHeroImage();
   initBackToTop();
+}
+
+function initHeroImage() {
+  var heroImg = document.querySelector('.hero-background img');
+  if (!heroImg) return;
+  function markLoaded() {
+    heroImg.classList.add('loaded');
+    var hero = heroImg.closest('.hero');
+    if (hero) hero.classList.add('image-loaded');
+  }
+  if (heroImg.complete) {
+    markLoaded();
+  } else {
+    heroImg.addEventListener('load', markLoaded);
+  }
 }
 
 function initBackToTop() {
