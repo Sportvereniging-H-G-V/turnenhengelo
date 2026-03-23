@@ -12,16 +12,15 @@ const heroImage = '/images/hero.avif';
     <picture class="hero-background" aria-hidden="true">
       <source type="image/avif" srcset="/images/hero.avif" />
       <source type="image/webp" srcset="/images/hero.webp" />
-      <img 
-        src="/images/hero.webp" 
-        alt="" 
-        loading="eager" 
+      <img
+        src="/images/hero.webp"
+        alt=""
+        loading="eager"
         fetchpriority="high"
         width="2002"
         height="3648"
         decoding="async"
         sizes="100vw"
-        onload="this.classList.add('loaded'); this.closest('.hero')?.classList.add('image-loaded')"
       />
     </picture>
     <div class="hero-overlay" aria-hidden="true"></div>
