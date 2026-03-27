@@ -343,6 +343,7 @@ const heroImage = '/images/hero.avif';
 
   .hero-title {
     margin-bottom: 1.5rem;
+    color: var(--color-white);
   }
 
   .text-primary-gradient {
@@ -530,16 +531,33 @@ const heroImage = '/images/hero.avif';
     }
   }
 
+  .check-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .check-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: var(--spacing-xs);
+  }
+
   .check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
     background-color: var(--color-primary);
-    content: "✓" !important;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 900;
-    transform: none !important;
   }
 
   /* Safety Box */
