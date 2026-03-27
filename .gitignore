@@ -21,6 +21,8 @@ pnpm-debug.log*
 # IDE
 .vscode/
 .idea/
+.gemini/
+.claude/
 
 # Astro generated files
 .astro/
