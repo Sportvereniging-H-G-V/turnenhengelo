@@ -34,12 +34,17 @@ const heroImage = '/images/hero.avif';
         <a href="#varianten" class="btn btn-secondary">Alle Sporten</a>
       </nav>
     </div>
+    <a href="#over" class="hero-scroll-indicator" aria-label="Scroll naar beneden">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 5v14M12 19l-7-7M12 19l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
   </section>
 
   <!-- Introductie -->
   <section id="over" class="section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-animate>
         <h2 class="text-center">Hengelo turnt</h2>
         <p class="section-intro text-center">Welkom bij Turnen Hengelo! Op deze pagina lees je alles over turnlessen en -activiteiten binnen onze vereniging. We leggen uit wat turnen inhoudt, welke varianten er zijn, en hoe jij kunt beginnen — op jouw eigen niveau.</p>
       </div>
@@ -49,7 +54,7 @@ const heroImage = '/images/hero.avif';
   <!-- Over turnen -->
   <section class="section section-alt">
     <div class="container">
-      <div class="content-with-image">
+      <div class="content-with-image" data-animate>
         <div class="content-text">
           <span class="badge mb-sm">Methodiek</span>
           <h2>Wat houdt turnen in?</h2>
@@ -79,10 +84,10 @@ const heroImage = '/images/hero.avif';
   <!-- Voor wie is turnen? -->
   <section class="section">
     <div class="container">
-      <h2 class="text-center mb-xl">Voor wie is turnen?</h2>
-      
+      <h2 class="text-center mb-xl" data-animate>Voor wie is turnen?</h2>
+
       <div class="content-grid">
-        <div class="feature-card card">
+        <div class="feature-card card" data-animate data-delay="1">
           <div class="icon-circle bg-primary-soft">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
@@ -90,7 +95,7 @@ const heroImage = '/images/hero.avif';
           <p class="text-muted">Turnen is geschikt voor alle leeftijden. Ook als je slechts één keer per week wilt trainen, kun je volledig meedoen binnen je eigen niveau.</p>
         </div>
         
-        <div class="feature-card card">
+        <div class="feature-card card" data-animate data-delay="2">
           <div class="icon-circle bg-primary-soft">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/><path d="m12 8-4 4 4 4"/><path d="m16 12-4-4"/><path d="m16 12-4 4"/></svg>
           </div>
@@ -98,7 +103,7 @@ const heroImage = '/images/hero.avif';
           <p class="text-muted">In de lessen trainen jongens en meisjes samen. Samen trainen werkt motiverend en helpt bij het leren van nieuwe elementen op alle toestellen.</p>
         </div>
         
-        <div class="feature-card card">
+        <div class="feature-card card" data-animate data-delay="3">
           <div class="icon-circle bg-primary-soft">
             <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22V2"/><path d="M7 22V2"/><path d="M17 11H7"/><path d="M17 5H7"/><path d="M17 17H7"/></svg>
           </div>
@@ -112,7 +117,7 @@ const heroImage = '/images/hero.avif';
   <!-- Lesopbouw -->
   <section class="section section-alt">
     <div class="container">
-      <div class="card p-xl border-primary">
+      <div class="card p-xl border-primary" data-animate>
         <h2>Hoe ziet een turnles eruit?</h2>
         <p class="mb-lg">Onze turnlessen duren doorgaans langer dan een standaard gymles, zodat er ruimte is voor een volledige ervaring:</p>
         <div class="list-grid">
@@ -134,7 +139,7 @@ const heroImage = '/images/hero.avif';
   <!-- Andere sporten & varianten -->
   <section id="varianten" class="section">
     <div class="container">
-      <div class="section-header text-center">
+      <div class="section-header text-center" data-animate>
         <h2>Turnen is zoveel meer</h2>
         <p class="section-intro">Binnen Turnen Hengelo kun je verschillende disciplines ontdekken die aansluiten bij jouw interesses.</p>
       </div>
@@ -181,12 +186,11 @@ const heroImage = '/images/hero.avif';
             id: 'freerunning',
             title: 'Free-running',
             image: '/images/sports/freerunning',
-            desc: 'De kunst om obstakels zo vloeiend en gecontroleerd mogelijk te nemen.',
-            zoom: true
+            desc: 'De kunst om obstakels zo vloeiend en gecontroleerd mogelijk te nemen.'
           }
         ].map(sport => (
           <div class="card sport-card">
-            <div class={`sport-image ${sport.zoom ? 'sport-image-zoom' : ''}`}>
+            <div class="sport-image">
               <picture>
                 <source type="image/avif" srcset={`${sport.image}.avif`} />
                 <source type="image/webp" srcset={`${sport.image}.webp`} />
@@ -213,7 +217,7 @@ const heroImage = '/images/hero.avif';
   <!-- Kleding & veiligheid -->
   <section class="section section-alt">
     <div class="container">
-      <div class="safety-box">
+      <div class="safety-box" data-animate>
         <div class="safety-icon">
           <svg width="40" height="40" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
         </div>
@@ -241,7 +245,7 @@ const heroImage = '/images/hero.avif';
   <!-- Contact -->
   <section id="contact" class="section">
     <div class="container">
-      <div class="contact-card card">
+      <div class="contact-card card" data-animate>
         <div class="contact-content">
           <h2>Klaar om te beginnen?</h2>
           <p class="mb-lg">Heb je vragen, wil je een keer meedoen of wil je meer weten over een van de sporten? We helpen je graag verder.</p>
@@ -352,7 +356,7 @@ const heroImage = '/images/hero.avif';
     font-weight: 500;
     margin-bottom: 3rem;
     opacity: 0.9;
-    line-height: 1.4;
+    line-height: 1.6;
   }
 
   @media (min-width: 768px) {
@@ -373,6 +377,43 @@ const heroImage = '/images/hero.avif';
     .hero-cta {
       flex-direction: row;
     }
+  }
+
+  /* Hero scroll indicator */
+  .hero-scroll-indicator {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: color var(--transition-base), border-color var(--transition-base), background-color var(--transition-base);
+    text-decoration: none;
+  }
+
+  .hero-scroll-indicator:hover {
+    color: var(--color-white);
+    border-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-scroll-indicator svg {
+      animation: bounce 2s ease-in-out infinite;
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
   }
 
   .hero-cta .btn-secondary {
@@ -423,6 +464,14 @@ const heroImage = '/images/hero.avif';
   .feature-card {
     text-align: center;
     padding: var(--spacing-xl) var(--spacing-lg);
+    cursor: default;
+  }
+
+  /* Disable lift-hover for non-interactive feature cards */
+  .feature-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--color-border);
   }
 
   .icon-circle {
@@ -456,14 +505,8 @@ const heroImage = '/images/hero.avif';
   .sport-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    padding: 2rem;
-    transition: transform var(--transition-slow);
-  }
-
-  .sport-image-zoom img {
     object-fit: cover;
-    padding: 0;
+    transition: transform var(--transition-slow);
   }
 
   .sport-card:hover .sport-image img {
@@ -557,12 +600,14 @@ const heroImage = '/images/hero.avif';
     background-color: rgba(255, 255, 255, 0.05);
     padding: 1.5rem;
     border-radius: 1rem;
-    transition: all var(--transition-base);
+    border: 1px solid transparent;
+    transition: background-color var(--transition-base), border-color var(--transition-base);
+    cursor: pointer;
   }
 
   .contact-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateX(10px);
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.15);
   }
 
   .contact-link .label {
@@ -608,4 +653,21 @@ const heroImage = '/images/hero.avif';
     .fade-in:nth-child(4) { animation-delay: 0.7s; }
   }
 </style>
+
+<script>
+  // Scroll-reveal via IntersectionObserver
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  document.querySelectorAll('[data-animate]').forEach((el) => observer.observe(el));
+</script>
 
