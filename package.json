@@ -24,5 +24,10 @@
     "eslint-plugin-astro": "^1.7.0",
     "sharp": "^0.34.5",
     "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "@astrojs/check": {
+      "typescript": "$typescript"
+    }
   }
 }
