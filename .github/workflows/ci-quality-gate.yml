@@ -1,9 +1,12 @@
-# DO NOT RENAME — branch-protection contract.
-# The `name:` field below is the prefix of every required status check
-# ("CI Quality Gate Baseline / lint", "… / test", "… / dependency-audit",
-# "… / secret-scan"). Renaming this workflow or the jobs below will silently
-# break branch protection across every consuming repository. See
-# docs/ci-quality-gate-baseline.md and SPO-20 / SPO-47 for context.
+# DO NOT RENAME JOBS — branch-protection contract.
+# Because each job calls a reusable workflow, GitHub formats the required
+# status-check context as "<job-id> / <reusable-job-name>", NOT as
+# "<workflow-name> / <job-id>". The actual required contexts are:
+#   "lint / lint", "test / test",
+#   "dependency-audit / dependency-audit", "secret-scan / secret-scan"
+# Renaming the job IDs below (lint, test, dependency-audit, secret-scan)
+# or the job names inside the reusable workflows will break branch protection.
+# See docs/ci-quality-gate-baseline.md and SPO-20 / SPO-47 / SPO-125 for context.
 name: CI Quality Gate Baseline
 
 on:
